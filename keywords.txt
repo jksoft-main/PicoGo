@@ -1,0 +1,19 @@
+#######################################
+# Syntax Coloring Map For PicoGo
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PicoGo	KEYWORD1
+
+#######################################
+# Methods (KEYWORD2)
+#######################################
+
+begin KEYWORD2
+getCanvas KEYWORD2
+getIrDetectorRight KEYWORD2
+getIrDetectorLeft KEYWORD2
+getUltrasonicDistance KEYWORD2
