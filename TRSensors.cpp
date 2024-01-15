@@ -101,7 +101,9 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 			if(digitalRead(DataOut)) 
 			values[j] |= 0x01;
 			digitalWrite(Clock,HIGH);
+			delayMicroseconds(50);
 			digitalWrite(Clock,LOW);
+			delayMicroseconds(50);
 		}
 		//sent 11 to 16 clock 
 		for(i = 0;i < 4;i++)
@@ -110,7 +112,9 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 			if(digitalRead(DataOut)) 
 			values[j] |= 0x01;
 			digitalWrite(Clock,HIGH);
+			delayMicroseconds(50);
 			digitalWrite(Clock,LOW);
+			delayMicroseconds(50);
 		}
 		digitalWrite(CS,HIGH);
 	}

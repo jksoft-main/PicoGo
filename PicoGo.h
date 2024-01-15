@@ -1,9 +1,5 @@
 #include <LovyanGFX.hpp>
-
-#define PIN_IR_DETECTOR_R    2
-#define PIN_IR_DETECTOR_L    3
-#define PIN_ULTRASONIC_TRG   14
-#define PIN_ULTRASONIC_ECHO  15
+#include "Motor.h"
 
 class LGFX_ST7789 : public lgfx::LGFX_Device {
   lgfx::Panel_ST7789    _panel_instance;
@@ -52,7 +48,21 @@ public:
   bool getIrDetectorRight();
   bool getIrDetectorLeft();
   int getUltrasonicDistance();
+  char IR_decode(unsigned char * code);
+  void forward();
+  void backward();
+  void right();
+  void left();
+  void stop();
+  void setMaxSpeed(int speed);
+  void setSpeed(int speed);
+  int getSpeed();
+  void control(int right,int left);
 private:
   LGFX_ST7789 lcd;
   LGFX_Sprite* canvas;
+  Motor motor;
+  int motorSpeed = 100;
+  int maxSpeed = 100;
+  int motorState;
 };
