@@ -36,7 +36,7 @@
 
 #include "Arduino.h"
 
-//#define TYPE1
+// #define TYPE1
 
 #define QTR_EMITTERS_OFF 0
 #define QTR_EMITTERS_ON 1

@@ -16,8 +16,6 @@
 #include "TRSensors.h"
 
 #ifdef TYPE1
-//#include "Adafruit_ADS1X15.h"
-//Adafruit_ADS1015 ads;
 #include "ADS1X15.h"
 ADS1015 ads(0x48,&Wire1);
 #else
@@ -118,11 +116,11 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 		}
 		digitalWrite(CS,HIGH);
 	}
-#endif
 	for(i = 0;i < _numSensors + 1;i++)
 	{
 		values[i] = values[i] >> 2;
 	}
+#endif
 
 	for(i = 0;i < _numSensors;i++)
 	{
